@@ -80,9 +80,25 @@ class processDataSet
      * @param  array  $paramData [description]
      * @return [type]            [description]
      */
-    private function output(array $paramData) : bool
+    private function output(array $paramData)
     {
-        return (bool)fwrite(STDOUT, implode("\n", $output) . "\n");
+        $output = implode("\n", array_map(
+            function ($v, $k) { return sprintf("%s - %s", $k, $v); },
+            $paramData,
+            array_keys($paramData)
+        ));
+
+        fwrite(STDOUT, $this->removeLineBreak($output));
+    }
+
+    /**
+     * @source http://stackoverflow.com/questions/709669/how-do-i-remove-blank-lines-from-text-in-php
+     * @param  string $paramData [description]
+     * @return [type]            [description]
+     */
+    private function removeLineBreak(string $paramData) : string
+    {
+        return preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $paramData);
     }
 }
 
