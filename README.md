@@ -10,15 +10,17 @@ Many of our screens and reports show a list of leases. The task is to sort lease
 
 The data looks as follows (actual data file attached):
  
-#50 - Smith
+```
+    #50 - Smith
 
-#8 - Johnson
+    #8 - Johnson
 
-#100 - Sanders
+    #100 - Sanders
 
-#1B - Adams
+    #1B - Adams
 
-#1A – Kessenich
+    #1A – Kessenich
+```
  
 Each line contains a unit number and a resident name. The data should be sorted by unit number.
 
@@ -37,16 +39,16 @@ Each line contains a unit number and a resident name. The data should be sorted 
 
 # Requirements
 
-Read data from text (txt) file.
+- Read data from text (txt) file.
 
-Sort based on #{unit number}.
+- Sort based on #{unit number}.
 
-Print sorted array to stdout.
+- Print sorted array to stdout.
 
 # To Execute
 
 ## Docker
-Required Docker 1.14 and pre-req.
+Requires Docker 1.14 and pre-req.
 
 `docker build -t example . &&  docker run -it --rm --name property_brands example`
 
