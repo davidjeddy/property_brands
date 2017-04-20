@@ -21,6 +21,9 @@ Each line contains a unit number and a resident name. The data should be sorted 
 Santizited and Normalized output strings. IE each row using the same seperators between unit and name.
 Source data set could be 1 item, could a billion.
 A pre-described set of characters will seperate the unit from the person in each line of the source data.
+Database storage is not available, 'cause that is how the data should be injested, stored, egressed.
+Normaized and sanitized reports are not available; thus the logic is responsible for such actions.
+
 
 # Requirements
 Read data from text (txt) file.
