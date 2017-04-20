@@ -17,6 +17,10 @@ The data looks as follows (actual data file attached):
 Each line contains a unit number and a resident name. The data should be sorted by unit number.
 
 
+# Assumptions
+Santizited and Normalized output strings. IE each row using the same seperators between unit and name.
+Source data set could be 1 item, could a billion.
+
 # Requirements
 Read data from text (txt) file.
 Sort based on #{unit number}.
