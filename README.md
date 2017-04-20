@@ -1,0 +1,34 @@
+# Property Brands
+
+## Unit Sort Test
+
+### Summary
+ 
+We often deal with unit number / resident name data. These two pieces of information are used by our users to identify a lease.
+Many of our screens and reports show a list of leases. The task is to sort lease data read from a file and to print the sorted data to STDOUT.
+The data looks as follows (actual data file attached):
+ 
+#50 - Smith
+#8 - Johnson
+#100 - Sanders
+#1B - Adams
+#1A – Kessenich
+ 
+Each line contains a unit number and a resident name. The data should be sorted by unit number.
+
+
+# Requirements
+Read data from text (txt) file.
+Sort based on #{unit number}.
+Print sorted array to stdout.
+
+# To Execute
+
+## Docker
+`docker build -t my-php-app .`
+
+## Vagrant
+
+
+## Native (Requires PHP 7.x)
+`php index.php`
