@@ -19,7 +19,6 @@ class processDataSet
     public $seperators = [' - ', ' – '];
 
     /**
-     * [__constructor description]
      * @param  [type] $paramData [description]
      * @return [type]            [description]
      */
@@ -30,7 +29,6 @@ class processDataSet
     }
 
     /**
-     * [exec description]
      * @param  string $paramData [description]
      * @return [type]            [description]
      */
@@ -62,39 +60,29 @@ class processDataSet
 
         // sort lines
         $returnData = $this->sortArray($returnData);
-        
-        print_r($returnData);
 
         // output now sorted data
-        //$this->output($returnData);
+        $this->output($returnData);
     }
 
     /**
-     * [sortArray description]
      * @param  array  $paramData [description]
      * @return [type]            [description]
      */
     private function sortArray(array $paramData) : array
     {
-        natsort($paramData);
+        array_multisort(array_keys($paramData), SORT_NATURAL, $paramData);
 
-        print_r( $paramData );
-        exit(1);
+        return $paramData;
     }
 
     /**
-     * Send the sorted array to STDOUT
-     * 
-     * @param  string $paramData [description]
+     * @param  array  $paramData [description]
      * @return [type]            [description]
      */
-    private function output(array $paramData) : void
+    private function output(array $paramData) : bool
     {
-        foreach($paramData as $key => $value) {
-            fwrite(STDOUT, implode(' - ', $output) . "\n");
-        }
-        
-        return void;
+        return (bool)fwrite(STDOUT, implode("\n", $output) . "\n");
     }
 }
 
