@@ -38,4 +38,13 @@ Required Docker 1.14 and pre-req.
 `docker build -t example . &&  docker run -it --rm --name property_brands example`
 
 ## Native (Requires PHP 7.x)
-`php index.php`
+`php -f index.php`
+
+
+# To Test
+
+## Docker
+`docker run -v $(pwd):/app --rm phpunit/phpunit run`
+
+## Native (Requires PHPUnit 6+)
+`phpunit ./`
