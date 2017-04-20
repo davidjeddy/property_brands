@@ -25,10 +25,9 @@ Print sorted array to stdout.
 # To Execute
 
 ## Docker
-`docker build -t my-php-app .`
+Required Docker 1.14 and pre-req.
 
-## Vagrant
-
+`docker build -t example . &&  docker run -it --rm --name property_brands example`
 
 ## Native (Requires PHP 7.x)
 `php index.php`
