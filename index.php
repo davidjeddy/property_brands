@@ -53,6 +53,7 @@ class processDataSet
                 if (strpos($line, $sepOption) > 0) {
                     // explode string and push onto return array
                     $tmp = explode($sepOption, $line);
+                    var_dump($tmp[1]);
                     $this->data[$tmp[0]] = $this->removeLineBreak($tmp[1]);
                 }
             }
