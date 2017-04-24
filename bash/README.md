@@ -36,7 +36,8 @@ Each line contains a unit number and a resident name. The data should be sorted 
 
 - Normalized and sanitized reports are not available; thus the logic is responsible for such actions.
 
-## Requirements
+
+# Requirements
 
 - Read data from text (txt) file.
 
@@ -46,21 +47,17 @@ Each line contains a unit number and a resident name. The data should be sorted 
 
 - Maintain relationship between unit number and name string.
 
-# Demo 1 : PHP 
+# To Execute
 
-## To Execute
-
-`cd ./php`
-
-### Docker
+## Docker
 Requires Docker 1.14 and pre-req.
 
 `docker build -t example . &&  docker run -it --rm --name property_brands example`
 
-### Native (Requires PHP 7.x)
+## Native (Requires PHP 7.x)
 `php -f index.php`
 
-## Results
+# Results
 ```
 #1A - Kessenich
 
@@ -72,13 +69,3 @@ Requires Docker 1.14 and pre-req.
 
 #100 - Sanders
 ```
-
-# Demo 2 : Bash
-
-## To Execute
-
-cd `./bash`
-
-### Linux Native (requires BASH)
-
-./run.sh
