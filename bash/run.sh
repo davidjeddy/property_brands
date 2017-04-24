@@ -1,1 +1,3 @@
-sort ./source_data.txt > ./sorted_data.txt && tail -100 ./sorted_data.txt
+clear
+export FILE=./sorted_data.txt
+sort ./source_data.txt > $FILE && tail -n +1 $FILE
